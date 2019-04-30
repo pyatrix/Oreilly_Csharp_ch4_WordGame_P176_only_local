@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oreilly_Csharp_ch4_WordGame_P176_only_local", "Oreilly_Csharp_ch4_WordGame_P176_only_local\Oreilly_Csharp_ch4_WordGame_P176_only_local.csproj", "{DC143C36-194B-4BB5-9E79-71C87831CD01}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC143C36-194B-4BB5-9E79-71C87831CD01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC143C36-194B-4BB5-9E79-71C87831CD01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC143C36-194B-4BB5-9E79-71C87831CD01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC143C36-194B-4BB5-9E79-71C87831CD01}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC85DB87-11C0-4A81-9C4A-E916D37A8D9B}
+	EndGlobalSection
+EndGlobal
