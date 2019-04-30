@@ -16,5 +16,10 @@ namespace Oreilly_Csharp_ch4_WordGame_P176_only_local
         {
             InitializeComponent();
         }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
