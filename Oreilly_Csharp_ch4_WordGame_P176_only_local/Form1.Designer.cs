@@ -30,8 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.Time1 = new System.Windows.Forms.Timer(this.components);
+            this.correctLabelcontrol = new System.Windows.Forms.StatusStrip();
+            this.correctLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.missdLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.totalLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.accuracyLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.StatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.difficulityProgressBar = new System.Windows.Forms.ToolStripProgressBar();
+            this.correctLabelcontrol.SuspendLayout();
             this.SuspendLayout();
             // 
             // listBox1
@@ -44,27 +51,78 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(860, 136);
             this.listBox1.TabIndex = 0;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.ListBox1_SelectedIndexChanged);
             // 
-            // statusStrip1
+            // Time1
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 114);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(860, 22);
-            this.statusStrip1.TabIndex = 1;
-            this.statusStrip1.Text = "statusStrip1";
+            this.Time1.Enabled = true;
+            this.Time1.Tick += new System.EventHandler(this.Time1_Tick);
+            // 
+            // correctLabelcontrol
+            // 
+            this.correctLabelcontrol.BackColor = System.Drawing.SystemColors.Control;
+            this.correctLabelcontrol.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.correctLabel,
+            this.missdLabel,
+            this.totalLabel,
+            this.accuracyLabel,
+            this.StatusLabel,
+            this.difficulityProgressBar});
+            this.correctLabelcontrol.Location = new System.Drawing.Point(0, 114);
+            this.correctLabelcontrol.Name = "correctLabelcontrol";
+            this.correctLabelcontrol.Size = new System.Drawing.Size(860, 22);
+            this.correctLabelcontrol.TabIndex = 1;
+            // 
+            // correctLabel
+            // 
+            this.correctLabel.Name = "correctLabel";
+            this.correctLabel.Size = new System.Drawing.Size(59, 17);
+            this.correctLabel.Text = "Correct:0";
+            // 
+            // missdLabel
+            // 
+            this.missdLabel.Name = "missdLabel";
+            this.missdLabel.Size = new System.Drawing.Size(58, 17);
+            this.missdLabel.Text = "Missed:0";
+            // 
+            // totalLabel
+            // 
+            this.totalLabel.Name = "totalLabel";
+            this.totalLabel.Size = new System.Drawing.Size(47, 17);
+            this.totalLabel.Text = "Total:0";
+            // 
+            // accuracyLabel
+            // 
+            this.accuracyLabel.Name = "accuracyLabel";
+            this.accuracyLabel.Size = new System.Drawing.Size(82, 17);
+            this.accuracyLabel.Text = "Accuracy: 0%";
+            // 
+            // StatusLabel
+            // 
+            this.StatusLabel.Name = "StatusLabel";
+            this.StatusLabel.Size = new System.Drawing.Size(497, 17);
+            this.StatusLabel.Spring = true;
+            this.StatusLabel.Text = "Difficulty";
+            this.StatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // difficulityProgressBar
+            // 
+            this.difficulityProgressBar.Name = "difficulityProgressBar";
+            this.difficulityProgressBar.Size = new System.Drawing.Size(100, 16);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(860, 136);
-            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.correctLabelcontrol);
             this.Controls.Add(this.listBox1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.correctLabelcontrol.ResumeLayout(false);
+            this.correctLabelcontrol.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -73,8 +131,14 @@
         #endregion
 
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.Timer Time1;
+        private System.Windows.Forms.StatusStrip correctLabelcontrol;
+        private System.Windows.Forms.ToolStripStatusLabel correctLabel;
+        private System.Windows.Forms.ToolStripStatusLabel missdLabel;
+        private System.Windows.Forms.ToolStripStatusLabel totalLabel;
+        private System.Windows.Forms.ToolStripStatusLabel accuracyLabel;
+        private System.Windows.Forms.ToolStripStatusLabel StatusLabel;
+        private System.Windows.Forms.ToolStripProgressBar difficulityProgressBar;
     }
 }
 
