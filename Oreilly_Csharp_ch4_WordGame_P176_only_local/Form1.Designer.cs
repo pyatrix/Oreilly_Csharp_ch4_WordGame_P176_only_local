@@ -76,31 +76,31 @@
             // correctLabel
             // 
             this.correctLabel.Name = "correctLabel";
-            this.correctLabel.Size = new System.Drawing.Size(59, 17);
+            this.correctLabel.Size = new System.Drawing.Size(58, 17);
             this.correctLabel.Text = "Correct:0";
             // 
             // missdLabel
             // 
             this.missdLabel.Name = "missdLabel";
-            this.missdLabel.Size = new System.Drawing.Size(58, 17);
+            this.missdLabel.Size = new System.Drawing.Size(57, 17);
             this.missdLabel.Text = "Missed:0";
             // 
             // totalLabel
             // 
             this.totalLabel.Name = "totalLabel";
-            this.totalLabel.Size = new System.Drawing.Size(47, 17);
+            this.totalLabel.Size = new System.Drawing.Size(46, 17);
             this.totalLabel.Text = "Total:0";
             // 
             // accuracyLabel
             // 
             this.accuracyLabel.Name = "accuracyLabel";
-            this.accuracyLabel.Size = new System.Drawing.Size(82, 17);
+            this.accuracyLabel.Size = new System.Drawing.Size(81, 17);
             this.accuracyLabel.Text = "Accuracy: 0%";
             // 
             // StatusLabel
             // 
             this.StatusLabel.Name = "StatusLabel";
-            this.StatusLabel.Size = new System.Drawing.Size(497, 17);
+            this.StatusLabel.Size = new System.Drawing.Size(501, 17);
             this.StatusLabel.Spring = true;
             this.StatusLabel.Text = "Difficulty";
             this.StatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -121,6 +121,7 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.correctLabelcontrol.ResumeLayout(false);
             this.correctLabelcontrol.PerformLayout();
             this.ResumeLayout(false);
