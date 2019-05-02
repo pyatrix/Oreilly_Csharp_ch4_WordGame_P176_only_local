@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oreilly_Csharp_ch4_WordGame_P176_only_local", "Oreilly_Csharp_ch4_WordGame_P176_only_local\Oreilly_Csharp_ch4_WordGame_P176_only_local.csproj", "{DC143C36-194B-4BB5-9E79-71C87831CD01}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0FC709C6-62DA-4CB4-9DD9-17E6B18A3FBC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

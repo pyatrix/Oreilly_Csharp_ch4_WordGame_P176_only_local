@@ -33,7 +33,7 @@
             this.Time1 = new System.Windows.Forms.Timer(this.components);
             this.correctLabelcontrol = new System.Windows.Forms.StatusStrip();
             this.correctLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.missdLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.missedLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.totalLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.accuracyLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.StatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
@@ -48,6 +48,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 120;
             this.listBox1.Location = new System.Drawing.Point(0, 0);
+            this.listBox1.MultiColumn = true;
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(860, 136);
             this.listBox1.TabIndex = 0;
@@ -56,6 +57,7 @@
             // Time1
             // 
             this.Time1.Enabled = true;
+            this.Time1.Interval = 700;
             this.Time1.Tick += new System.EventHandler(this.Time1_Tick);
             // 
             // correctLabelcontrol
@@ -63,7 +65,7 @@
             this.correctLabelcontrol.BackColor = System.Drawing.SystemColors.Control;
             this.correctLabelcontrol.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.correctLabel,
-            this.missdLabel,
+            this.missedLabel,
             this.totalLabel,
             this.accuracyLabel,
             this.StatusLabel,
@@ -76,37 +78,38 @@
             // correctLabel
             // 
             this.correctLabel.Name = "correctLabel";
-            this.correctLabel.Size = new System.Drawing.Size(58, 17);
+            this.correctLabel.Size = new System.Drawing.Size(59, 17);
             this.correctLabel.Text = "Correct:0";
             // 
-            // missdLabel
+            // missedLabel
             // 
-            this.missdLabel.Name = "missdLabel";
-            this.missdLabel.Size = new System.Drawing.Size(57, 17);
-            this.missdLabel.Text = "Missed:0";
+            this.missedLabel.Name = "missedLabel";
+            this.missedLabel.Size = new System.Drawing.Size(58, 17);
+            this.missedLabel.Text = "Missed:0";
             // 
             // totalLabel
             // 
             this.totalLabel.Name = "totalLabel";
-            this.totalLabel.Size = new System.Drawing.Size(46, 17);
+            this.totalLabel.Size = new System.Drawing.Size(47, 17);
             this.totalLabel.Text = "Total:0";
             // 
             // accuracyLabel
             // 
             this.accuracyLabel.Name = "accuracyLabel";
-            this.accuracyLabel.Size = new System.Drawing.Size(81, 17);
+            this.accuracyLabel.Size = new System.Drawing.Size(82, 17);
             this.accuracyLabel.Text = "Accuracy: 0%";
             // 
             // StatusLabel
             // 
             this.StatusLabel.Name = "StatusLabel";
-            this.StatusLabel.Size = new System.Drawing.Size(501, 17);
+            this.StatusLabel.Size = new System.Drawing.Size(466, 17);
             this.StatusLabel.Spring = true;
             this.StatusLabel.Text = "Difficulty";
             this.StatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // difficulityProgressBar
             // 
+            this.difficulityProgressBar.Maximum = 701;
             this.difficulityProgressBar.Name = "difficulityProgressBar";
             this.difficulityProgressBar.Size = new System.Drawing.Size(100, 16);
             // 
@@ -117,11 +120,13 @@
             this.ClientSize = new System.Drawing.Size(860, 136);
             this.Controls.Add(this.correctLabelcontrol);
             this.Controls.Add(this.listBox1);
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.correctLabelcontrol.ResumeLayout(false);
             this.correctLabelcontrol.PerformLayout();
             this.ResumeLayout(false);
@@ -135,7 +140,7 @@
         private System.Windows.Forms.Timer Time1;
         private System.Windows.Forms.StatusStrip correctLabelcontrol;
         private System.Windows.Forms.ToolStripStatusLabel correctLabel;
-        private System.Windows.Forms.ToolStripStatusLabel missdLabel;
+        private System.Windows.Forms.ToolStripStatusLabel missedLabel;
         private System.Windows.Forms.ToolStripStatusLabel totalLabel;
         private System.Windows.Forms.ToolStripStatusLabel accuracyLabel;
         private System.Windows.Forms.ToolStripStatusLabel StatusLabel;
